@@ -7,7 +7,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  int _selectedIndex = 3;
+  int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const Text("Home"),
     const Text("Search"),
@@ -38,6 +38,7 @@ class _BottomBarState extends State<BottomBar> {
           showUnselectedLabels: false,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.blueGrey,
+          type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
