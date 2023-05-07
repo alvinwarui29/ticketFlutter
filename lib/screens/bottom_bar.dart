@@ -16,8 +16,9 @@ class _BottomBarState extends State<BottomBar> {
   ];
 
   void _ontappedItem(int index) {
-    _selectedIndex = index;
-    print('The tapped index is : $_selectedIndex');
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 
   @override
@@ -30,6 +31,7 @@ class _BottomBarState extends State<BottomBar> {
         child: _widgetOptions[_selectedIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
           onTap: _ontappedItem,
           elevation: 10,
           showSelectedLabels: false,
