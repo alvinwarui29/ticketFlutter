@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
-  BottomBar({super.key});
+  const BottomBar({super.key});
   @override
   State<StatefulWidget> createState() => _BottomBarState();
 }
@@ -14,6 +14,13 @@ class _BottomBarState extends State<BottomBar> {
         title: const Text('My tickets'),
       ),
       body: Container(),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.airplane_ticket), label: 'ticket'),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'profile'),
+      ]),
     );
   }
 }
