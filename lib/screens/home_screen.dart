@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:ticket_booking/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFeeedf2),
+      backgroundColor: Styles.bgColor,
       body: ListView(
         children: [
           Container(
@@ -19,9 +19,12 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text('hello and good morning'),
-                        Text('Book tickets'),
+                      children: [
+                        Text(
+                          'hello and good morning',
+                          style: Styles.headLine3,
+                        ),
+                        Text('Book tickets', style: Styles.headLine1),
                       ],
                     ),
                     Container(
