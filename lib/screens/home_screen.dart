@@ -52,11 +52,23 @@ class HomeScreen extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.all(20),
                   child: Row(
-                    children: const [
-                      Icon(Icons.search),
-                      Text("Search"),
+                    children: [
+                      const Icon(Icons.search),
+                      Text("Search", style: Styles.headLine4),
                     ],
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Upcoming flight',
+                      style: Styles.headLine3,
+                    ),
+                    Text('View all',
+                        style: Styles.textStyle
+                            .copyWith(color: Styles.primaryColor)),
+                  ],
                 )
               ],
             ),
