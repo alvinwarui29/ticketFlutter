@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_booking/utils/app_styles.dart';
-import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -65,9 +64,12 @@ class HomeScreen extends StatelessWidget {
                       'Upcoming flight',
                       style: Styles.headLine3,
                     ),
-                    Text('View all',
-                        style: Styles.textStyle
-                            .copyWith(color: Styles.primaryColor)),
+                    InkWell(
+                      onTap: () {},
+                      child: Text('View all',
+                          style: Styles.textStyle
+                              .copyWith(color: Styles.primaryColor)),
+                    ),
                   ],
                 )
               ],
