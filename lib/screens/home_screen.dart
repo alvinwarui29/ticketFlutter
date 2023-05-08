@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_booking/screens/ticket_view.dart';
 import 'package:ticket_booking/utils/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -74,7 +75,11 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const TicketView(),
         ],
       ),
     );
